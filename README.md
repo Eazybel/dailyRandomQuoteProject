@@ -16,8 +16,7 @@ Daily Positivity is a full-stack web application and automation workflow that de
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** React.js, Tailwind CSS, Axios
-* **Backend:** Node.js, Express.js
+* **Frontend:** React.js, Tailwind CSS,
 * **Database:** MongoDB (Mongoose ORM)
 * **Automation/Cron:** n8n
 * **Email Delivery:** Nodemailer / SMTP (via n8n email node)
@@ -41,9 +40,4 @@ Daily Positivity is a full-stack web application and automation workflow that de
 * A running instance of n8n (Cloud, Desktop, or Docker self-hosted)
 * An SMTP Server / Email Service Provider credentials (e.g., SendGrid, Gmail App Password)
 
-### Installation & Local Setup
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/daily-positivity-quotes.git](https://github.com/your-username/daily-positivity-quotes.git)
-   cd daily-positivity-quotes
