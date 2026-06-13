@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Daily Positivity</title>
+  <title>Register - Daily Positivity</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-amber-50/60 min-h-screen flex items-center justify-center p-4 font-sans">
@@ -14,7 +14,7 @@
       <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-amber-100 text-amber-600 text-xl mb-2">
         🌟
       </div>
-      <h1 class="text-xl font-bold text-slate-800">Welcome Back</h1>
+      <h1 class="text-xl font-bold text-slate-800">Create an Account</h1>
       <p class="text-xs text-slate-500 mt-0.5">Custom quotes delivered straight to your inbox daily.</p>
     </div>
 
@@ -25,7 +25,7 @@
         <path d="M6.88,12.9c-0.18,-0.54 -0.28,-1.1 -0.28,-1.7c0,-0.6 0.1,-1.16 0.28,-1.7V6.8H3.4C2.8,8 2.45,9.36 2.45,10.8c0,1.44 0.35,2.8 0.95,4V12.9z" fill="#FBBC05" />
         <path d="M12,5.12c1.4,0 2.68,0.48 3.68,1.43l2.75,-2.75C16.78,2.3 14.6,1.4 12,1.4 8.23,1.4 4.98,3.2 3.4,6.8l3.48,2.7C7.6,7.32 9.62,5.12 12,5.12z" fill="#EA4335" />
       </svg>
-      <span>Continue with Google</span>
+      <span>Sign up with Google</span>
     </button>
 
     <div class="flex items-center my-4">
@@ -36,32 +36,36 @@
 
     <form onsubmit="event.preventDefault();" class="space-y-3.5">
       <div>
+        <label for="name" class="block text-[10px] font-semibold text-slate-600 uppercase tracking-wider mb-1">Full Name</label>
+        <input type="text" id="name" placeholder="John Doe" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:bg-white transition" required>
+      </div>
+
+      <div>
         <label for="email" class="block text-[10px] font-semibold text-slate-600 uppercase tracking-wider mb-1">Email Address</label>
         <input type="email" id="email" placeholder="name@example.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:bg-white transition" required>
       </div>
 
       <div>
-        <div class="flex justify-between items-center mb-1">
-          <label for="password" class="block text-[10px] font-semibold text-slate-600 uppercase tracking-wider">Password</label>
-          <a href="#" class="text-[11px] font-medium text-amber-600 hover:text-amber-700 transition">Forgot?</a>
-        </div>
+        <label for="password" class="block text-[10px] font-semibold text-slate-600 uppercase tracking-wider mb-1">Password</label>
         <input type="password" id="password" placeholder="••••••••" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:bg-white transition" required>
       </div>
 
-      <div class="flex items-center pt-0.5">
-        <input type="checkbox" id="remember" class="w-3.5 h-3.5 rounded text-amber-500 border-slate-300 focus:ring-amber-400 accent-amber-500">
-        <label for="remember" class="ms-2 text-xs text-slate-600 select-none">Keep me signed in</label>
+      <div class="flex items-start pt-0.5">
+        <input type="checkbox" id="terms" class="w-3.5 h-3.5 mt-0.5 rounded text-amber-500 border-slate-300 focus:ring-amber-400 accent-amber-500" required>
+        <label for="terms" class="ms-2 text-xs text-slate-600 select-none leading-tight">
+          I agree to the <a href="#" class="text-amber-600 hover:underline">Terms</a> & <a href="#" class="text-amber-600 hover:underline">Privacy</a>.
+        </label>
       </div>
 
       <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2.5 px-4 rounded-xl shadow-sm text-sm transition-all duration-200 active:scale-[0.98] mt-1">
-        Sign In
+        Get Started
       </button>
     </form>
 
     <div class="text-center mt-5">
       <p class="text-xs text-slate-500">
-        New to Daily Positivity? 
-        <a href="#" class="font-medium text-amber-600 hover:text-amber-700 transition">Create an account</a>
+        Already have an account? 
+        <a href="#" class="font-medium text-amber-600 hover:text-amber-700 transition">Sign in</a>
       </p>
     </div>
 

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Positivity Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-amber-50/60 min-h-screen text-slate-800 font-sans">
+
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    
+    <header class="text-center mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-amber-600 flex items-center justify-center gap-2">
+        <span>🌟</span> Daily Positivity
+      </h1>
+      <p class="text-slate-500 mt-2">Manage your daily dose of inspiration and good vibes.</p>
+    </header>
+
+    <section class="bg-white rounded-2xl shadow-sm border border-amber-100 p-6 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+        
+        <div>
+          <label for="tone" class="block text-sm font-semibold text-slate-700 mb-2">Quote Tone / Vibe</label>
+          <select id="tone" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-400 transition">
+            <option value="inspirational">✨ Inspirational</option>
+            <option value="romantic">💖 Romantic</option>
+            <option value="life">🌱 Life Lessons</option>
+            <option value="stoicism">🏛️ Stoicism</option>
+            <option value="career">💼 Career & Grind</option>
+            <option value="mindfulness">🧘 Mindfulness</option>
+            <option value="humor">😂 Uplifting Humor</option>
+            <option value="confidence">💪 Self-Confidence</option>
+            <option value="gratitude">🙏 Gratitude</option>
+            <option value="creativity">🎨 Creativity</option>
+            <option value="resilience">🛡️ Resilience</option>
+            <option value="friendship">🤝 Friendship</option>
+            <option value="wisdom">📖 Ancient Wisdom</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="time" class="block text-sm font-semibold text-slate-700 mb-2">Delivery Time</label>
+          <select id="time" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-400 transition">
+            <option value="06:00">06:00 AM (Early Bird)</option>
+            <option value="07:00">07:00 AM</option>
+            <option value="08:00" selected>08:00 AM (Recommended)</option>
+            <option value="09:00">09:00 AM</option>
+            <option value="12:00">12:00 PM (Midday Boost)</option>
+            <option value="18:00">06:00 PM</option>
+            <option value="21:00">09:00 PM (Before Bed)</option>
+          </select>
+        </div>
+
+        <div class="flex flex-col items-center md:items-end justify-center h-full pb-1">
+          <span class="block text-sm font-semibold text-slate-700 mb-2 md:text-right w-full md:pr-2">Service Status</span>
+          <label class="relative inline-flex items-center cursor-pointer select-none">
+            <input type="checkbox" id="status-toggle" class="sr-only peer" checked>
+            <div class="w-14 h-8 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:start-[4px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-amber-500"></div>
+            <span id="toggle-label" class="ms-3 text-sm font-medium text-slate-700 min-w-[24px]">On</span>
+          </label>
+        </div>
+
+      </div>
+      
+      <div class="mt-6 flex justify-end">
+        <button class="bg-amber-500 hover:bg-amber-600 text-white font-medium px-6 py-2.5 rounded-xl shadow-sm transition-all duration-200 active:scale-95">
+          Save Preferences
+        </button>
+      </div>
+    </section>
+
+    <main>
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+          📜 Received Quotes History
+        </h2>
+        <span class="text-xs font-semibold bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">3 Quotes Delivered</span>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="bg-white border border-slate-100 rounded-xl p-5 shadow-sm hover:border-amber-200 transition-colors">
+          <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+            <span class="text-xs font-medium bg-purple-50 text-purple-600 px-2.5 py-0.5 rounded-full">✨ Inspirational</span>
+            <span class="text-xs text-slate-400">Today, 08:00 AM</span>
+          </div>
+          <p class="text-slate-700 italic text-lg font-serif">"The only way to do great work is to love what you do."</p>
+          <p class="text-slate-500 text-sm mt-2 text-right">— Steve Jobs</p>
+        </div>
+
+        <div class="bg-white border border-slate-100 rounded-xl p-5 shadow-sm hover:border-amber-200 transition-colors">
+          <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+            <span class="text-xs font-medium bg-emerald-50 text-emerald-600 px-2.5 py-0.5 rounded-full">🧘 Mindfulness</span>
+            <span class="text-xs text-slate-400">Yesterday, 08:00 AM</span>
+          </div>
+          <p class="text-slate-700 italic text-lg font-serif">"You have power over your mind - not outside events. Realize this, and you will find strength."</p>
+          <p class="text-slate-500 text-sm mt-2 text-right">— Marcus Aurelius</p>
+        </div>
+
+        <div class="bg-white border border-slate-100 rounded-xl p-5 shadow-sm hover:border-amber-200 transition-colors">
+          <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+            <span class="text-xs font-medium bg-pink-50 text-pink-600 px-2.5 py-0.5 rounded-full">💖 Romantic</span>
+            <span class="text-xs text-slate-400">Oct 24, 2025, 08:00 AM</span>
+          </div>
+          <p class="text-slate-700 italic text-lg font-serif">"In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."</p>
+          <p class="text-slate-500 text-sm mt-2 text-right">— Maya Angelou</p>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    const toggle = document.getElementById('status-toggle');
+    const label = document.getElementById('toggle-label');
+    
+    toggle.addEventListener('click', function() {
+      label.textContent = this.checked ? 'On' : 'Off';
+    });
+  </script>
+</body>
+</html>
