@@ -22,12 +22,10 @@ signInWithPopup(auth, provider)
     const user = result.user;
 const additionalInfo=getAdditionalUserInfo(result)
 if(additionalInfo.isNewUser){
-const userData={
-    userName:user.displayName,
-    userID:user.uid,
-    userEmail:user.email
-}
-localStorage.setItem("userData",userData)
+localStorage.clear()
+localStorage.setItem("userID",user.uid)
+localStorage.setItem("userName",user.displayName)
+localStorage.setItem("userEmail",user.email)
 window.location.href="./dashboard.html"
 }else if(!additionalInfo.isNewUser){
 alert("the user is already registered please sign in again")
@@ -38,6 +36,5 @@ alert("the user is already registered please sign in again")
     const errorMessage = error.message;
     // ...
   });
-// localStorage.setItem("userID","zzzzzzzzzz")
-// window.location.href="./dashboard.html"
+
 }

@@ -1,6 +1,6 @@
 const express=require("express")
 const mongoose=require("mongoose")
-const dbServerController=require("./controller/databaseServer")
+const dbServerController=require("./controller/dbUpdateUser")
 const app=express()
 const path=require("path")
 
@@ -25,7 +25,7 @@ console.log(err)
 app.get("/", (req, res)=>{
 res.sendFile(path.join(__dirname,"public/index.html"))
 })
-app.get("/dbServer", dbServerController)
+app.post("/dbUpdateUser", dbServerController)
 
 // server innitiation
 app.listen(5000,()=>{

@@ -20,5 +20,5 @@ unique:true,
 trim:true
 }
 })
-const UserID=new mongoose.model("userID",user,)
-module.exports=UserID
+const UserIDModel=new mongoose.model("UserIDModel",user,)
+module.exports=UserIDModel

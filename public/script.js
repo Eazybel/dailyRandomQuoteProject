@@ -21,14 +21,12 @@ signInWithPopup(auth, provider)
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const user = result.user;
     const additionalInfo=getAdditionalUserInfo(result)
-const userData={
-    userName:user.displayName,
-    userID:user.uid,
-    userEmail:user.email
-}
-localStorage.setItem("userData",userData)
+localStorage.clear()
+localStorage.setItem("userID",user.uid)
+localStorage.setItem("userName",user.displayName)
+localStorage.setItem("userEmail",user.email)
     window.location.href="./dashboard.html"
-console.log(localStorage.getItem("userData"))
+
 
   }).catch((error) => {
     const errorCode = error.code;
