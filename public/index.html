@@ -18,15 +18,10 @@
       <p class="text-xs text-slate-500 mt-0.5">Custom quotes delivered straight to your inbox daily.</p>
     </div>
 
-    <button type="button" class="w-full flex items-center justify-center gap-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 font-medium py-2.5 px-4 rounded-xl shadow-sm transition duration-200 active:scale-[0.99] text-sm">
-      <svg class="w-4 h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M21.35,11.1H12v2.7h5.38c-0.24,1.28 -0.96,2.37 -2.04,3.1v2.6h3.3c1.93,-1.78 3.04,-4.4 3.04,-7.4C21.68,11.75 21.56,11.4 21.35,11.1z" fill="#4285F4" />
-        <path d="M12,20.6c2.6,0 4.78,-0.86 6.38,-2.3l-3.3,-2.6c-0.9,0.6 -2.07,0.98 -3.08,0.98 -2.38,0 -4.4,-1.6 -5.12,-3.78H3.4v2.7C4.98,18.8 8.23,20.6 12,20.6z" fill="#34A853" />
-        <path d="M6.88,12.9c-0.18,-0.54 -0.28,-1.1 -0.28,-1.7c0,-0.6 0.1,-1.16 0.28,-1.7V6.8H3.4C2.8,8 2.45,9.36 2.45,10.8c0,1.44 0.35,2.8 0.95,4V12.9z" fill="#FBBC05" />
-        <path d="M12,5.12c1.4,0 2.68,0.48 3.68,1.43l2.75,-2.75C16.78,2.3 14.6,1.4 12,1.4 8.23,1.4 4.98,3.2 3.4,6.8l3.48,2.7C7.6,7.32 9.62,5.12 12,5.12z" fill="#EA4335" />
-      </svg>
-      <span>Continue with Google</span>
-    </button>
+   <button type="button" id="signInGooglebtn" class="w-full flex items-center justify-center gap-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 font-medium py-2.5 px-4 rounded-xl shadow-sm transition duration-200 active:scale-[0.99] text-sm">
+  <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo" class="w-4 h-4" />
+  <span>Continue with Google</span>
+</button>
 
     <div class="flex items-center my-4">
       <div class="flex-grow border-t border-slate-100"></div>
@@ -53,7 +48,7 @@
         <label for="remember" class="ms-2 text-xs text-slate-600 select-none">Keep me signed in</label>
       </div>
 
-      <button type="submit" id="signInbtn" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2.5 px-4 rounded-xl shadow-sm text-sm transition-all duration-200 active:scale-[0.98] mt-1">
+      <button type="submit"  class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2.5 px-4 rounded-xl shadow-sm text-sm transition-all duration-200 active:scale-[0.98] mt-1">
         Sign In
       </button>
     </form>

@@ -5,10 +5,14 @@ const app=express()
 const path=require("path")
 
 //middlewares
-app.use(express.urlencoded({exrended:true}))
+app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname,"public")))
 app.use(express.json())
 app.use(express.text())
+app.use((req, res, next) => {
+  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+  next();
+});
 
 // database connection
 mongoose.connect("mongodb+srv://eazybel27_db_user:rRvtwsChiKvVum45@randomquote.fjtlhqq.mongodb.net/?appName=randomQuote").then(()=>
