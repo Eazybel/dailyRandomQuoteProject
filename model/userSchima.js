@@ -18,6 +18,10 @@ type:String,
 required:true,
 unique:true,
 trim:true
+},
+quoteHistory:{
+type:String,
+trim:true
 }
 })
 const UserIDModel=new mongoose.model("UserIDModel",user,)

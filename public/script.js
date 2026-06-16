@@ -25,7 +25,7 @@ localStorage.clear()
 localStorage.setItem("userID",user.uid)
 localStorage.setItem("userName",user.displayName)
 localStorage.setItem("userEmail",user.email)
-    window.location.href="./dashboard.html"
+window.location.href="./dashboard.html"
 
 
   }).catch((error) => {

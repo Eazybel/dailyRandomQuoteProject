@@ -13,6 +13,16 @@ return res.json()
 }).then((data)=>{
 console.log(data)
 })
+fetch("/dbFetchUser",{
+method:"post",
+headers:{"Content-type":"application/json"},
+body:localData.userID
+
+}).then((res)=>{
+return res.text()
+}).then((data)=>{
+console.log(data)
+})
 
 const toggle = document.getElementById('status-toggle');
 const label = document.getElementById('toggle-label'); 
