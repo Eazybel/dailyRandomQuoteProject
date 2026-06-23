@@ -26,6 +26,21 @@ localStorage.clear()
 localStorage.setItem("userID",user.uid)
 localStorage.setItem("userName",user.displayName)
 localStorage.setItem("userEmail",user.email)
+const localData={
+userID:localStorage.getItem("userID"),
+userName:localStorage.getItem("userName"),
+userEmail:localStorage.getItem("userEmail")
+}
+fetch("/dbUpdateUser",{
+method:"post",
+headers:{"Content-type":"application/json"},
+body:JSON.stringify(localData)
+
+}).then((res)=>{
+return res.json()
+}).then((data)=>{
+console.log(data)
+})
 window.location.href="./dashboard.html"
 }else if(!additionalInfo.isNewUser){
 alert("the user is already registered please sign in again")

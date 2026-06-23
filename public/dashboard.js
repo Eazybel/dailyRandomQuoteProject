@@ -1,22 +1,7 @@
-const localData={
-userID:localStorage.getItem("userID"),
-userName:localStorage.getItem("userName"),
-userEmail:localStorage.getItem("userEmail")
-}
-fetch("/dbUpdateUser",{
-method:"post",
-headers:{"Content-type":"application/json"},
-body:JSON.stringify(localData)
-
-}).then((res)=>{
-return res.json()
-}).then((data)=>{
-console.log(data)
-})
 fetch("/dbFetchUser",{
 method:"post",
-headers:{"Content-type":"application/json"},
-body:localData.userID
+headers:{"Content-type":"text/plain"},
+body:localStorage.getItem("userID")
 
 }).then((res)=>{
 return res.text()

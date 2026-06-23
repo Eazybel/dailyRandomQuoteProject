@@ -2,6 +2,7 @@ const express=require("express")
 const mongoose=require("mongoose")
 const dbServerController=require("./controller/dbUpdateUser")
 const dbFetchUser=require("./controller/dbFetchUser")
+const quoteUpload=require("./controller/quoteUpload")
 const app=express()
 const path=require("path")
 
@@ -28,6 +29,7 @@ res.sendFile(path.join(__dirname,"public/index.html"))
 })
 app.post("/dbUpdateUser", dbServerController)
 app.post("/dbFetchUser", dbFetchUser)
+app.post("/quoteUpload", quoteUpload)
 
 // server innitiation
 app.listen(5000,()=>{

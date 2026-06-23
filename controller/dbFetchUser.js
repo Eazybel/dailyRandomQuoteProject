@@ -1,6 +1,7 @@
 const mongoose =require("mongoose")
 const dbUserData=require("../model/userSchima")
-const dbFetchUser=(req,res)=>{
-res.send(req.body)
+const dbFetchUser=async(req,res)=>{
+const user= await dbUserData.findOne({userID:req.body})
+res.send(user)
 }
 module.exports=dbFetchUser

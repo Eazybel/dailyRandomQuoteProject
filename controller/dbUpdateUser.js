@@ -5,7 +5,7 @@ const dbUpdateUser=(req,res)=>{
 const userData= new userIDModel({
 userID:req.body.userID,
 userName:req.body.userName,
-userEmail:req.body.userID
+userEmail:req.body.userEmail
 })
 
 userData.save()
