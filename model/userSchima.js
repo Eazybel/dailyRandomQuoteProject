@@ -19,7 +19,7 @@ required:true,
 unique:true,
 trim:true
 },
-quoteHistory:[{text:{type:String},author:{type:String}}]
+quoteHistory:[String]
 })
 const UserIDModel=new mongoose.model("UserIDModel",user,)
 module.exports=UserIDModel
